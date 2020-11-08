@@ -341,7 +341,8 @@
             handleUpdate: function(index, row){
                 console.log(row)
                 this.updateFormVisible = true;
-                this.updateform.jobName = row.job_CLASS_NAME;
+                // jobName和jobName必须和创建jobTrigger时一样,否则会找不到
+                this.updateform.jobName = row.job_NAME;
                 this.updateform.jobGroup = row.job_GROUP;
             },
 

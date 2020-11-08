@@ -169,6 +169,8 @@ public class JobController {
             // 表达式调度构建器
             CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule(cronExpression);
 
+            // 如果返回null,说明这个任务不存在
+            // jobName和jobName必须和创建jobTrigger时一样,否则会找不到
             CronTrigger trigger = (CronTrigger) scheduler.getTrigger(triggerKey);
 
             // 按新的cronExpression表达式重新构建trigger

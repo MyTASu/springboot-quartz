@@ -1,7 +1,14 @@
 ### springboot-quartz
 
-#### springboot集成quartz 任务持久化
 
+
+**注意:本demo,自己的添加的job,必须实现BaseJob,还要将其加入ioc容器中,让spring管理,bean的名称就是任务的名称,必须唯一且一致**
+
+**线程是不安全的**
+
+SimpleTrigger的job 执行完后会在数据库删除相应数据
+
+#### springboot集成quartz 任务持久化
 
 [2019-9-1更新](#2019-9-1更新)
 
